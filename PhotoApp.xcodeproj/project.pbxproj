@@ -15,6 +15,7 @@
 		C67DAF2728EF0C0F00B7FC72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67DAF2528EF0C0F00B7FC72 /* LaunchScreen.storyboard */; };
 		C67DAF4B28EF100200B7FC72 /* SignupFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67DAF4A28EF100200B7FC72 /* SignupFormModelValidatorTests.swift */; };
 		C67DAF4D28EF11F500B7FC72 /* SignupFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */; };
+		C69BE0E428EF1F0000C51843 /* SignupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0E328EF1F0000C51843 /* SignupConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		C67DAF2D28EF0C0F00B7FC72 /* PhotoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67DAF4A28EF100200B7FC72 /* SignupFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidatorTests.swift; sourceTree = "<group>"; };
 		C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidator.swift; sourceTree = "<group>"; };
+		C69BE0E328EF1F0000C51843 /* SignupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				C67DAF2528EF0C0F00B7FC72 /* LaunchScreen.storyboard */,
 				C67DAF2828EF0C0F00B7FC72 /* Info.plist */,
 				C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */,
+				C69BE0E328EF1F0000C51843 /* SignupConstants.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				C67DAF1F28EF0C0C00B7FC72 /* ViewController.swift in Sources */,
 				C67DAF1B28EF0C0C00B7FC72 /* AppDelegate.swift in Sources */,
 				C67DAF4D28EF11F500B7FC72 /* SignupFormModelValidator.swift in Sources */,
+				C69BE0E428EF1F0000C51843 /* SignupConstants.swift in Sources */,
 				C67DAF1D28EF0C0C00B7FC72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
