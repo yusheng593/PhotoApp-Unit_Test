@@ -16,6 +16,10 @@
 		C67DAF4B28EF100200B7FC72 /* SignupFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67DAF4A28EF100200B7FC72 /* SignupFormModelValidatorTests.swift */; };
 		C67DAF4D28EF11F500B7FC72 /* SignupFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */; };
 		C69BE0E428EF1F0000C51843 /* SignupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0E328EF1F0000C51843 /* SignupConstants.swift */; };
+		C69BE0E628F061BA00C51843 /* SignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0E528F061BA00C51843 /* SignupWebService.swift */; };
+		C69BE0E828F063AB00C51843 /* SignupFormRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0E728F063AB00C51843 /* SignupFormRequestModel.swift */; };
+		C69BE0EA28F06A1400C51843 /* SignupResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0E928F06A1400C51843 /* SignupResponseModel.swift */; };
+		C69BE0EC28F06AEB00C51843 /* SignupErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE0EB28F06AEB00C51843 /* SignupErrors.swift */; };
 		F54B9DAE28F01D2F001CEB26 /* SignupWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B9DAD28F01D2F001CEB26 /* SignupWebServiceTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,10 @@
 		C67DAF4A28EF100200B7FC72 /* SignupFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidatorTests.swift; sourceTree = "<group>"; };
 		C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidator.swift; sourceTree = "<group>"; };
 		C69BE0E328EF1F0000C51843 /* SignupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConstants.swift; sourceTree = "<group>"; };
+		C69BE0E528F061BA00C51843 /* SignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebService.swift; sourceTree = "<group>"; };
+		C69BE0E728F063AB00C51843 /* SignupFormRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormRequestModel.swift; sourceTree = "<group>"; };
+		C69BE0E928F06A1400C51843 /* SignupResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseModel.swift; sourceTree = "<group>"; };
+		C69BE0EB28F06AEB00C51843 /* SignupErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupErrors.swift; sourceTree = "<group>"; };
 		F54B9DAD28F01D2F001CEB26 /* SignupWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +101,10 @@
 				C67DAF2828EF0C0F00B7FC72 /* Info.plist */,
 				C67DAF4C28EF11F500B7FC72 /* SignupFormModelValidator.swift */,
 				C69BE0E328EF1F0000C51843 /* SignupConstants.swift */,
+				C69BE0E528F061BA00C51843 /* SignupWebService.swift */,
+				C69BE0E728F063AB00C51843 /* SignupFormRequestModel.swift */,
+				C69BE0E928F06A1400C51843 /* SignupResponseModel.swift */,
+				C69BE0EB28F06AEB00C51843 /* SignupErrors.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -210,8 +222,12 @@
 			files = (
 				C67DAF1F28EF0C0C00B7FC72 /* ViewController.swift in Sources */,
 				C67DAF1B28EF0C0C00B7FC72 /* AppDelegate.swift in Sources */,
+				C69BE0EA28F06A1400C51843 /* SignupResponseModel.swift in Sources */,
 				C67DAF4D28EF11F500B7FC72 /* SignupFormModelValidator.swift in Sources */,
+				C69BE0EC28F06AEB00C51843 /* SignupErrors.swift in Sources */,
 				C69BE0E428EF1F0000C51843 /* SignupConstants.swift in Sources */,
+				C69BE0E628F061BA00C51843 /* SignupWebService.swift in Sources */,
+				C69BE0E828F063AB00C51843 /* SignupFormRequestModel.swift in Sources */,
 				C67DAF1D28EF0C0C00B7FC72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +392,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GB9JDW7JTT;
+				DEVELOPMENT_TEAM = H23U829MKV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -390,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Samuel.PhotoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusheng.PhotoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -405,7 +421,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GB9JDW7JTT;
+				DEVELOPMENT_TEAM = H23U829MKV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -419,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Samuel.PhotoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusheng.PhotoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -435,7 +451,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GB9JDW7JTT;
+				DEVELOPMENT_TEAM = H23U829MKV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,7 +478,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GB9JDW7JTT;
+				DEVELOPMENT_TEAM = H23U829MKV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
