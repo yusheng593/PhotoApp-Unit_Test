@@ -72,6 +72,11 @@ class SignupFormModelValidatorTests: XCTestCase {
         let isPasswordRepeatValid = sut.isPasswordRepeatValid(passowrd: "Strings", repeatPassword: "String")
         XCTAssertFalse(isPasswordRepeatValid, "isPasswordRepeatValid should returned FALSE but is has returned TRUE")
     }
+    
+    func testSignFormModelValidator_WhenPasswordNotEqualToRepeatPassword_ShouldReturnTrue() {
+        let isPasswordRepeatValid = sut.isPasswordRepeatValid(passowrd: "String", repeatPassword: "String")
+        XCTAssertTrue(isPasswordRepeatValid, "isPasswordRepeatValid should returned TRUE but is has returned FALSE")
+    }
 
     
 
