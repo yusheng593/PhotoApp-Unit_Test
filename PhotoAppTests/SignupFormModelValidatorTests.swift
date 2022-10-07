@@ -57,6 +57,21 @@ class SignupFormModelValidatorTests: XCTestCase {
         // Assert
         XCTAssertFalse(isFirstNameValid, "The isFirstNameValidtrue() should have returned FALSE for a first name that is longer than \(SignupConstants.firstNameMaxLength) characters but is has returned TRUE")
     }
+    
+    func testSignFormModelValidator_WhenTooShortLastNameProvided_ShouldReturnFalse() {
+        let isLastNameValid = sut.isLastNameValid(lastName: "L")
+        XCTAssertFalse(isLastNameValid, "isLastNameValid should returned FALSE but is has returned TRUE")
+    }
+    
+    func testSignFormModelValidator_WhenEmailFormatError_ShouldReturnFalse() {
+        let isEmailValid = sut.isEmailValid(email: "qwert")
+        XCTAssertFalse(isEmailValid, "isEmailValid should returned FALSE but is has returned TRUE")
+    }
+    
+    func testSignFormModelValidator_WhenPasswordNotEqualToRepeatPassword_ShouldReturnFalse() {
+        let isPasswordRepeatValid = sut.isPasswordRepeatValid(passowrd: "Strings", repeatPassword: "String")
+        XCTAssertFalse(isPasswordRepeatValid, "isPasswordRepeatValid should returned FALSE but is has returned TRUE")
+    }
 
     
 

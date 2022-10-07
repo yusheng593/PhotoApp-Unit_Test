@@ -19,4 +19,28 @@ class SignupFormModelValidator {
         return returnValue
     }
     
+    func isLastNameValid(lastName: String) -> Bool {
+        var returnValue = true
+        
+        if lastName.count < SignupConstants.lastNameMinLength {
+            returnValue = false
+        }
+        
+        return returnValue
+    }
+    
+    func isEmailValid(email: String) -> Bool {
+        var returnValue = true
+        
+        if !email.contains(SignupConstants.emailFormat) {
+            returnValue = false
+        }
+        
+        return returnValue
+    }
+    
+    func isPasswordRepeatValid(passowrd: String, repeatPassword: String) -> Bool {
+        return passowrd == repeatPassword
+    }
+    
 }
