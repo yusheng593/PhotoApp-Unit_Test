@@ -13,4 +13,5 @@ struct SignupConstants {
     static let lastNameMinLength = 2
     static let lastNameMaxLength = 10
     static let emailFormat = "@"
+    static let signupURLSession = "http://appsdeveloperblog.com:8080/signup-mock-service/users"
 }

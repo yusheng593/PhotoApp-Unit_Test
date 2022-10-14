@@ -17,7 +17,7 @@ class SignupWebService {
         self.urlSession = urlSession
     }
     
-    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel, SignupErrors) -> Void) {
+    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel?, SignupErrors?) -> Void) {
         guard let url = URL(string: urlString) else {
             // TODO: need test to url = nil
             return
@@ -31,9 +31,9 @@ class SignupWebService {
         let dataTask = urlSession.dataTask(with: request) { data, response, error in
             // TODO: need test to handle and error
             if let data = data, let signupResponseModel = try? JSONDecoder().decode(SignupResponseModel.self, from: data) {
-                completionHandler(signupResponseModel, error as! SignupErrors)
+                completionHandler(signupResponseModel, nil)
             } else {
-                // TODO: need test to error
+                completionHandler(nil, SignupErrors.responseModelParsingError)
             }
         }
         dataTask.resume()
