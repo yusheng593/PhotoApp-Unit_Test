@@ -35,6 +35,10 @@ class SignupPresenterTests: XCTestCase {
         
         // Assert
         XCTAssertTrue(mockSignupModelValidator.isFirstNameValidated,"First name was not validated")
+        XCTAssertTrue(mockSignupModelValidator.isLastNameValidated, "Last name was not validated")
+        XCTAssertTrue(mockSignupModelValidator.isEmailFormatValidated, "Email format was not validated")
+        XCTAssertTrue(mockSignupModelValidator.isPasswordValidated, "Password was not validated")
+        XCTAssertTrue(mockSignupModelValidator.isPasswordEqualityValidated, "Did not validate if passwords match")
         
     }
     
