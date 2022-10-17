@@ -27,6 +27,7 @@ class SignupWebServiceTests: XCTestCase {
         sut = nil
         signFormRequestModel = nil
         MockURLProtocol.stubResponseData = nil
+        MockURLProtocol.error = nil
         
     }
     
@@ -59,7 +60,7 @@ class SignupWebServiceTests: XCTestCase {
         sut.signup(withForm: signFormRequestModel) { (signupResponseModel, error) in
             // Assert
             XCTAssertNil(signupResponseModel, "The response model for a request containing unknown JSON response, should have been nil")
-            XCTAssertEqual(error, SignupErrors.responseModelParsingError, "The signup() method did not return expected error")
+            XCTAssertEqual(error, SignupError.invalidResponseModel, "The signup() method did not return expected error")
             expectation.fulfill()
             
         }
@@ -73,11 +74,27 @@ class SignupWebServiceTests: XCTestCase {
         // Act
         sut.signup(withForm: signFormRequestModel) { signupResponseModel, error in
             // Assert
-            XCTAssertEqual(error, SignupErrors.invalidRequestURLStringError, "The signup() method did not return an expected error for an invalidRequestURLString error")
+            XCTAssertEqual(error, SignupError.invalidRequestURLString, "The signup() method did not return an expected error for an invalidRequestURLString error")
             XCTAssertNil(signupResponseModel, "When an invalidRequestURLString takes place, the response model must be nil")
             expectation.fulfill()
         }
         self.wait(for: [expectation], timeout: 2)
+    }
+    
+    func testSignupWebService_WhenURLRequestFails_ReturnsErrorMessageDescription() {
+        // Arrange
+        let expectation = self.expectation(description: "A failed Request expectation")
+        let errorDescription = "The operation couldn’t be completed. (PhotoApp.SignupError error 0.)"
+        MockURLProtocol.error = SignupError.failedRequest(description: errorDescription)
+        // Act
+        sut.signup(withForm: signFormRequestModel) { signupResponseModel, error in
+            // Assert
+            XCTAssertEqual(error, SignupError.failedRequest(description: errorDescription), "The signup() method did not return an expecter error for the Failed Request")
+//            XCTAssertEqual(error?.localizedDescription, errorDescription)
+            expectation.fulfill()
+        }
+        self.wait(for: [expectation], timeout: 2)
+        
     }
     
 }
