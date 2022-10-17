@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SignupFormModelValidator {
+class SignupFormModelValidator: SignupModelValidatorProtocol {
     
     func isFirstNameValid(firstName: String) -> Bool {
         var returnValue = true
@@ -22,25 +22,30 @@ class SignupFormModelValidator {
     func isLastNameValid(lastName: String) -> Bool {
         var returnValue = true
         
-        if lastName.count < SignupConstants.lastNameMinLength {
+        if lastName.count < SignupConstants.lastNameMinLength || lastName.count > SignupConstants.lastNameMaxLength {
             returnValue = false
         }
         
         return returnValue
     }
     
-    func isEmailValid(email: String) -> Bool {
+    func isValidEmailFormat(email: String) -> Bool {
+       return NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: email)
+    }
+    
+    func isPasswordValid(password: String) -> Bool {
         var returnValue = true
         
-        if !email.contains(SignupConstants.emailFormat) {
+        if password.count < SignupConstants.passwordMinLength ||
+        password.count > SignupConstants.passwordMaxLength {
             returnValue = false
         }
         
         return returnValue
     }
     
-    func isPasswordRepeatValid(passowrd: String, repeatPassword: String) -> Bool {
-        return passowrd == repeatPassword
+    func doPasswordsMatch(password: String, repeatPassword: String) -> Bool {
+        return password == repeatPassword
     }
     
 }
