@@ -85,6 +85,7 @@ class SignupWebServiceTests: XCTestCase {
         // Arrange
         let expectation = self.expectation(description: "A failed Request expectation")
         let errorDescription = "The operation couldn’t be completed. (PhotoApp.SignupError error 0.)"
+//        let errorDescription = "A localized description of an error"
         MockURLProtocol.error = SignupError.failedRequest(description: errorDescription)
         // Act
         sut.signup(withForm: signFormRequestModel) { signupResponseModel, error in

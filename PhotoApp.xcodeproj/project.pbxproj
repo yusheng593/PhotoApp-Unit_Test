@@ -123,14 +123,47 @@
 			path = PhotoAppTests;
 			sourceTree = "<group>";
 		};
+		F51F043A28FE6097006EEEC0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F53FF5E428FD457F002380DB /* SignupPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F51F043B28FE60DC006EEEC0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F53FF5E828FD4F5D002380DB /* SignupModelValidatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F51F043C28FE611E006EEEC0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F53FF5E028FD40AB002380DB /* SignupPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F51F043D28FE6153006EEEC0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F57B9EC128F5616A00A9497F /* MockURLProtocol.swift */,
+				F53FF5E628FD4967002380DB /* MockSignupModelValidator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F57B9EBA28F5199100A9497F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				F51F043B28FE60DC006EEEC0 /* Protocols */,
+				F51F043A28FE6097006EEEC0 /* Presenters */,
 				F57B9EBD28F51A6200A9497F /* NetWork */,
 				F57B9EBC28F51A2400A9497F /* Controllers */,
 				F57B9EBB28F5199D00A9497F /* Models */,
-				F53FF5E428FD457F002380DB /* SignupPresenter.swift */,
-				F53FF5E828FD4F5D002380DB /* SignupModelValidatorProtocol.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -183,11 +216,10 @@
 		F57B9EC028F560F200A9497F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				F51F043C28FE611E006EEEC0 /* Presenters */,
 				F57B9EBF28F51ACF00A9497F /* NetWork */,
 				F57B9EBE28F51AC600A9497F /* Models */,
-				F57B9EC128F5616A00A9497F /* MockURLProtocol.swift */,
-				F53FF5E028FD40AB002380DB /* SignupPresenterTests.swift */,
-				F53FF5E628FD4967002380DB /* MockSignupModelValidator.swift */,
+				F51F043D28FE6153006EEEC0 /* Mocks */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
