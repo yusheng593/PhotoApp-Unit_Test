@@ -14,6 +14,7 @@ class MockSignupWebService: SignupWebServiceProtocol {
     var shouldReturnError:Bool = false
     
     func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel?, SignupError?) -> Void) {
+        
         isSignupMethodCalled = true
         
         if shouldReturnError {
