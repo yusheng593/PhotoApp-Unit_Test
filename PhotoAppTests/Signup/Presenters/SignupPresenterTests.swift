@@ -63,4 +63,12 @@ class SignupPresenterTests: XCTestCase {
         
     }
     
+    func testSignupPresenter_WhenSignupOperationSuccessful_CallsSuccessOnViewDelegate() {
+        // Arrange
+        
+        // Act
+        
+        // Assert
+    }
+    
 }
