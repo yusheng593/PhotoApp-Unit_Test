@@ -18,7 +18,7 @@ class SignupWebServiceTests: XCTestCase {
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession(configuration: config)
-        sut = SignupWebService(urlString: SignupConstants.signupURLSession, urlSession: urlSession)
+        sut = SignupWebService(urlString: SignupConstants.signupURLString, urlSession: urlSession)
         signFormRequestModel = SignupFormRequestModel(firstName: "Sergey", lastName: "Kargopolov", email: "test@test.com", password: "12345678")
     }
     

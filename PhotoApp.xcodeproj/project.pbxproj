@@ -29,6 +29,8 @@
 		F53FF5E728FD4967002380DB /* MockSignupModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53FF5E628FD4967002380DB /* MockSignupModelValidator.swift */; };
 		F53FF5E928FD4F5D002380DB /* SignupModelValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53FF5E828FD4F5D002380DB /* SignupModelValidatorProtocol.swift */; };
 		F54B9DAE28F01D2F001CEB26 /* SignupWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B9DAD28F01D2F001CEB26 /* SignupWebServiceTests.swift */; };
+		F573DF7B2921F65800A021F8 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573DF7A2921F65800A021F8 /* MockSignupPresenter.swift */; };
+		F573DF7D2921F73C00A021F8 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573DF7C2921F73C00A021F8 /* SignupPresenterProtocol.swift */; };
 		F57B9EC228F5616A00A9497F /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B9EC128F5616A00A9497F /* MockURLProtocol.swift */; };
 		F59FA8F0291A561F00CD810C /* SignupViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FA8EF291A561F00CD810C /* SignupViewControllerTest.swift */; };
 		F59FA8F2291A5B1000CD810C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FA8F1291A5B1000CD810C /* SignupViewController.swift */; };
@@ -70,6 +72,8 @@
 		F53FF5E628FD4967002380DB /* MockSignupModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupModelValidator.swift; sourceTree = "<group>"; };
 		F53FF5E828FD4F5D002380DB /* SignupModelValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModelValidatorProtocol.swift; sourceTree = "<group>"; };
 		F54B9DAD28F01D2F001CEB26 /* SignupWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceTests.swift; sourceTree = "<group>"; };
+		F573DF7A2921F65800A021F8 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
+		F573DF7C2921F73C00A021F8 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
 		F57B9EC128F5616A00A9497F /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F59FA8EF291A561F00CD810C /* SignupViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewControllerTest.swift; sourceTree = "<group>"; };
 		F59FA8F1291A5B1000CD810C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				F53FF5E828FD4F5D002380DB /* SignupModelValidatorProtocol.swift */,
 				F51F044028FE84C2006EEEC0 /* SignupWebServiceProtocol.swift */,
 				C6A2EF7829053489002A4974 /* SignupViewDelegateProtocol.swift */,
+				F573DF7C2921F73C00A021F8 /* SignupPresenterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				F53FF5E628FD4967002380DB /* MockSignupModelValidator.swift */,
 				F51F043E28FE82FF006EEEC0 /* MockSignupWebService.swift */,
 				C6A2EF76290532E2002A4974 /* MockSignupViewDelegate.swift */,
+				F573DF7A2921F65800A021F8 /* MockSignupPresenter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F573DF7D2921F73C00A021F8 /* SignupPresenterProtocol.swift in Sources */,
 				F53FF5E528FD457F002380DB /* SignupPresenter.swift in Sources */,
 				C67DAF1B28EF0C0C00B7FC72 /* AppDelegate.swift in Sources */,
 				C69BE0EA28F06A1400C51843 /* SignupResponseModel.swift in Sources */,
@@ -370,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F573DF7B2921F65800A021F8 /* MockSignupPresenter.swift in Sources */,
 				F51F043F28FE82FF006EEEC0 /* MockSignupWebService.swift in Sources */,
 				F57B9EC228F5616A00A9497F /* MockURLProtocol.swift in Sources */,
 				F54B9DAE28F01D2F001CEB26 /* SignupWebServiceTests.swift in Sources */,
