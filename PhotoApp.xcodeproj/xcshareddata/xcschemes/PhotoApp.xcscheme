@@ -20,6 +20,20 @@
                ReferencedContainer = "container:PhotoApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5B4E061293F41FB00B7CFB5"
+               BuildableName = "PhotoAppUITests.xctest"
+               BlueprintName = "PhotoAppUITests"
+               ReferencedContainer = "container:PhotoApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -36,6 +50,17 @@
                BlueprintIdentifier = "C67DAF2C28EF0C0F00B7FC72"
                BuildableName = "PhotoAppTests.xctest"
                BlueprintName = "PhotoAppTests"
+               ReferencedContainer = "container:PhotoApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5B4E061293F41FB00B7CFB5"
+               BuildableName = "PhotoAppUITests.xctest"
+               BlueprintName = "PhotoAppUITests"
                ReferencedContainer = "container:PhotoApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
