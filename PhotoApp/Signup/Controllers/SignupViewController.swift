@@ -41,6 +41,7 @@ extension SignupViewController: SignupViewDelegateProtocol {
         let alert = UIAlertController(title: "Success", message: "Your request success", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
             if let successVC = self.storyboard?.instantiateViewController(withIdentifier: "successStoryboard") {
+                successVC.view.accessibilityIdentifier = "successStoryboard"
                 successVC.modalPresentationStyle = .fullScreen
                 self.present(successVC, animated: true)
             }

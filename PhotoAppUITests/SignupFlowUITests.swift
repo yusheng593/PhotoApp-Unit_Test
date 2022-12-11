@@ -18,6 +18,7 @@ final class SignupFlowUITests: XCTestCase {
     private var signupButton: XCUIElement!
     private var successButton: XCUIElement!
     private var memberPageButton: XCUIElement!
+    private var successView: XCUIElement!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -35,6 +36,7 @@ final class SignupFlowUITests: XCTestCase {
         signupButton = app.buttons["signupButton"]
         successButton = app.buttons["successOkButton"]
         memberPageButton = app.buttons["memberPageButton"]
+        successView = app.otherElements["successStoryboard"]
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -53,6 +55,7 @@ final class SignupFlowUITests: XCTestCase {
         signupButton = nil
         successButton = nil
         memberPageButton = nil
+        successView = nil
         
         try super.tearDownWithError()
     }
@@ -113,8 +116,10 @@ final class SignupFlowUITests: XCTestCase {
         // Act
         successButton.tap()
         // Assert
-        XCTAssertTrue(memberPageButton.isEnabled, "memberPageButton is not enabled for user interactions")
+//        XCTAssertTrue(memberPageButton.isEnabled, "memberPageButton is not enabled for user interactions")
 //        XCTAssertTrue(app.buttons["memberPageButton"].waitForExistence(timeout: 1), "memberPageButton is not enabled for user interactions when pressed successButton")
+        
+        XCTAssertTrue(successView.waitForExistence(timeout: 1), "successView was not presented when successButton was tapped")
 
 
         
